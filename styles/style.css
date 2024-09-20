@@ -1,0 +1,47 @@
+.toggle label:before {
+    content: '';
+    width: 22px;
+    height: 16px;
+    background: #ccc;
+    position: relative;
+    display: inline-block;
+    border-radius: 46px;
+    box-sizing: border-box;
+    transition: 0.2s ease-in;
+}
+
+.toggle label:after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    left: 2px;
+    top: 2px;
+    z-index: 2;
+    background: #fff;
+    box-sizing: border-box;
+    transition: 0.2s ease-in;
+}
+
+.toggle input[type="checkbox"]:checked + label:before {
+    background: rgba(110, 231, 183);
+}
+
+.toggle input[type="checkbox"]:checked + label:after {
+    left: 8px;
+}
+
+img.svg-icon.def {
+    filter: brightness(0) saturate(100%) invert(89%) sepia(7%) saturate(16%) hue-rotate(87deg) brightness(93%) contrast(90%);
+}
+
+img.svg-icon.red {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(83%) sepia(18%) saturate(717%) hue-rotate(311deg) brightness(101%) contrast(107%);
+    transition: filter .2s ease;
+}
+
+img.svg-icon.red:hover {
+    filter: brightness(0) saturate(100%) invert(59%) sepia(61%) saturate(1582%) hue-rotate(316deg) brightness(97%) contrast(101%);
+}
